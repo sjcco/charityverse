@@ -16,15 +16,15 @@
 
 @import 'bootstrap';
 
- @font-face {
+@font-face {
   font-family: 'ProximaNovaBold';
   src: font-url('ProximaNovaBold.otf') format('opentype');
- }
+}
 
- @font-face {
+@font-face {
   font-family: 'ProximaNovalight';
   src: font-url('ProximaNovaAltLight.otf') format('opentype');
- }
+}
 
 .bold {
   font-family: 'ProximaNovaBold';
@@ -35,5 +35,5 @@
 }
 
 body {
-  background-color: #F5F6F8;
+  background-color: #f5f6f8;
 }

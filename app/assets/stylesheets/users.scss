@@ -4,9 +4,9 @@
 
 .new {
   height: 100vh;
-  
+
   nav {
-    background-color: #3775BE;
+    background-color: #3775be;
 
     div {
       a {
@@ -17,9 +17,9 @@
 
     input {
       border: none;
-      background-color: #3775BE;
+      background-color: #3775be;
       color: white;
-      font-family: 'ProximaNovalight';
+      font-family: 'ProximaNovalight', sans-serif;
       font-size: 2rem;
       margin: 0;
     }
@@ -34,6 +34,7 @@
 
       .field {
         width: 100%;
+
         .name {
           width: 100%;
           border: none;
@@ -45,7 +46,6 @@
           }
         }
       }
-      
     }
   }
 }
