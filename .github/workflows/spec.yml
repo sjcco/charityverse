@@ -5,7 +5,7 @@ env:
   POSTGRES_DB: or_social_scaffold_
 
 name: Rails tests
-on: pull_request
+on: push
 jobs:
   rspec-test:
     name: RSpec
