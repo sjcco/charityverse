@@ -6,5 +6,7 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:create]
   resources :users, only: [:create, :show]
+  resources :charities
+  resources :groups
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
