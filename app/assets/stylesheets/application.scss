@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'bootstrap';
+
+@font-face {
+  font-family: 'ProximaNovaBold';
+  src: font-url('ProximaNovaBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'ProximaNovalight';
+  src: font-url('ProximaNovaAltLight.otf') format('opentype');
+}
+
+.bold {
+  font-family: 'ProximaNovaBold';
+}
+
+.light {
+  font-family: 'ProximaNovalight' !important;
+}
+
+body {
+  background-color: #f5f6f8;
+}
