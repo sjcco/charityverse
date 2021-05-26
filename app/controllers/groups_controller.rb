@@ -3,7 +3,10 @@ class GroupsController < ApplicationController
 
   def show; end
 
-  def index; end
+  def index
+    @title = 'Groups'
+    @groups = Group.all.order(name: :asc)
+  end
 
   def edit; end
 
