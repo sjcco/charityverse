@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy', as: 'logout'
   get 'signup' => 'users#new', as: 'signup'
   get 'externals' => 'charities#external', as: 'externals'
+  post 'create_charity' => 'charities#create', as: 'create_charity'
 
   resources :sessions, only: [:create]
   resources :users, only: [:create, :show]
