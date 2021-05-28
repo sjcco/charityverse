@@ -37,14 +37,39 @@
             </div>
           </div>
 
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <%= image_tag "panda.jpg", class: "img-fluid" %>
+              </div>
+              <%= f.radio_button :icon, "panda.jpg", class: 'my-4' %>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <%= image_tag "food.jpg", class: "img-fluid" %>
+              </div>
+              <%= f.radio_button :icon, "food.jpg", class: 'my-4' %>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <%= image_tag "red_cross.jpg", class: "img-fluid" %>
+              </div>
+              <%= f.radio_button :icon, "red_cross.jpg", class: 'my-4' %>
+            </div>
+          </div>
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span class='text-dark display-1'><i class="fas fa-chevron-left"></i></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span class='text-dark display-1'><i class="fas fa-chevron-right"></i></span>
         </button>
       </div>
     </div>
