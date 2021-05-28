@@ -26,7 +26,10 @@ class GroupsController < ApplicationController
     @charities = Charity.where(group_id: @group.id).all
   end
 
-  def index; end
+  def index
+    @title = 'Groups'
+    @groups = Group.all.order(name: :asc)
+  end
 
   def edit; end
 
