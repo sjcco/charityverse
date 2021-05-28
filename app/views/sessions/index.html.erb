@@ -1,8 +1,19 @@
-<div class="container index">
-  <h1 class='bold display-2 text-center my-auto'>Charityverse</h1>
-  <div class="buttons">
-    <%= link_to 'Log in', login_path, class: 'btn btn-primary' %>
-    <%= link_to 'Sign up', signup_path, class: 'btn btn-primary' %>
+<div class="container-fluid vh-100 m-0 p-0">
+  <div class="row h-50 m-0 p-0">
+    <div class="col w-100 m-0 p-0">
+      <%= image_tag "charity.jpg", class: 'img-fluid' %>
+    </div>
   </div>
+  <h1 class='bold display-2 text-center my-auto mb-5'>Charityverse</h1>
+  <div class="m-5 p-5"></div>
+  <div class="row justify-content-center pt-5 mx-0">
+    <div class="col-10 d-grid gap-2">
+    <%= link_to 'Log in', login_path, class: 'btn btn-primary py-3 fs-1' %></div>
+  </div>
+  <div class="row justify-content-center mt-4 mx-0">
+    <div class="col-10 d-grid gap-2">
+    <%= link_to 'Sign up', signup_path, class: 'btn btn-primary py-3 fs-1' %></div>
+  </div>
+  
 </div>
 

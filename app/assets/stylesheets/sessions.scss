@@ -2,31 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.index {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+// .index {
+//   height: 100vh;
+//   display: grid;
+//   grid-template-rows: 1fr 1fr 1fr;
 
-  h1 {
-    grid-row-start: 2;
-    grid-row-end: span 1;
-  }
+//   h1 {
+//     grid-row-start: 2;
+//     grid-row-end: span 1;
+//   }
 
-  div {
-    grid-row-start: 3;
-    grid-row-end: span 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+//   div {
+//     grid-row-start: 3;
+//     grid-row-end: span 1;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
 
-    a {
-      width: 100%;
-      padding: 1rem;
-      margin: 1rem;
-      font-size: 2rem;
-    }
-  }
-}
+//     a {
+//       width: 100%;
+//       padding: 1rem;
+//       margin: 1rem;
+//       font-size: 2rem;
+//     }
+//   }
+// }
 
 .new {
   height: 100vh;
