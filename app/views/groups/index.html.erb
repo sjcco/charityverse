@@ -1,2 +1,25 @@
-<h1>Groups#index</h1>
-<p>Find me in app/views/groups/index.html.erb</p>
+<div class="charity-external">
+  <%= render "offcanvas" %>
+  <div class="container-fluid">
+    
+    <% @groups.each do |group| %>
+      <div class="bg-white mt-4 mx-1 p-0 row">
+        <div class="col-4">
+          <%= link_to group_path(group) do %>
+            <%= image_tag group.icon, class: 'img-fluid' %>
+          <% end %>
+        </div>
+        <div class="col row">
+          <div class="text-secondary mt-4 pt-5 col-9 fs-1"><%= group.name %></div>
+          <div class="text-secondary my-0 col-12"><%= group.updated_at.strftime("%d %b %Y") %></div>
+        </div>      
+      </div>
+    <% end %>
+
+    <div class="container d-grid gap-2 my-5 mx-auto">
+    <%= link_to "New group", new_group_path, class: 'btn btn-success fs-1 py-4' %>
+    </div>
+
+  </div>
+  
+</div>
