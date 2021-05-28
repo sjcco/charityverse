@@ -1,10 +1,9 @@
 class CharitiesController < ApplicationController
   def new
-    @title = 'New Charity'
+    @title = 'New Charity Event'
     @charity = Charity.new
     @groups = Group.all.pluck(:name, :id)
     @groups.unshift(['No group', nil])
-    @id = 'new_charity'
   end
 
   def create
@@ -23,7 +22,11 @@ class CharitiesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @charity = Charity.find(params[:id])
+    @title = @charity.name
+    @group = Group.where(id: @charity.group_id).first
+  end
 
   def index
     @title = 'Charities'
@@ -37,9 +40,33 @@ class CharitiesController < ApplicationController
     @amount = @charities.pluck(:amount).inject(0, :+)
   end
 
-  def edit; end
+  def edit
+    @charity = Charity.find(params[:id])
+    @title = "Edit #{@charity.name}"
+    @groups = Group.all.pluck(:name, :id)
+    @groups.unshift(['No group', nil])
+  end
 
-  def destroy; end
+  def update
+    @charity = Charity.find(params[:id])
+    if @charity.update(charity_params)
+      flash[:notice] = "Charity #{@charity.name} was succesfully updated!"
+      redirect_to @charity
+    else
+      flash[:alert] = if @charity.errors.nil?
+                        'Something went wrong, please try again'
+                      else
+                        @charity.errors.messages
+                      end
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @charity = Charity.find(params[:id])
+    @charity.destroy
+    redirect_to charities_path, notice: 'Charity event was succesfully deleted'
+  end
 
   private
 

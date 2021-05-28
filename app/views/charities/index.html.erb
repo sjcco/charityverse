@@ -9,7 +9,9 @@
     <% @charities.each do |charity| %>
       <div class="bg-white mt-4 mx-1 p-0 row">
         <div class="col-4">
+          <%= link_to charity_path(charity) do %>
           <%= image_tag "children.png", class: 'img-fluid' %>
+          <% end %>
         </div>
         <div class="col row">
           <div class="text-secondary mt-4 pt-5 col-9 fs-1"><%= charity.name %></div>
@@ -20,7 +22,7 @@
     <% end %>
 
     <div class="container d-grid gap-2 my-5 mx-auto">
-    <%= link_to "New group", new_charity_path, class: 'btn btn-success fs-1 py-4' %>
+    <%= link_to "New event", new_charity_path, class: 'btn btn-success fs-1 py-4' %>
     </div>
 
   </div>
