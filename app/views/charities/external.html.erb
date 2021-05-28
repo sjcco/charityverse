@@ -1,2 +1,28 @@
-<h1>Charities#external</h1>
-<p>Find me in app/views/charities/external.html.erb</p>
+<div class="charity-external">
+  <%= render "offcanvas" %>
+  <div class="container-fluid">
+    <div class="row text-secondary justify-content-around bg-white fs-2 p-4">
+      <div class="col p-3"><h2 class='fs-1'>Total amount</h2></div>
+      <div class="col text-dark text-end p-3"><h2 class='fs-1'><%= format("$%.2f",@amount) %></h2></div>
+    </div>
+
+    <% @charities.each do |charity| %>
+      <div class="bg-white mt-4 mx-1 p-0 row">
+        <div class="col-4">
+          <%= image_tag "children.png", class: 'img-fluid' %>
+        </div>
+        <div class="col row">
+          <div class="text-secondary mt-4 pt-5 col-9 fs-1"><%= charity.name %></div>
+          <div class="col-3 text-center mt-4 pt-5 fs-1 text-dark"><%= format("$%.2f", charity.amount) %></div>
+          <div class="text-secondary my-0 col-12"><%= charity.updated_at.strftime("%d %b %Y")%></div>
+        </div>      
+      </div>
+    <% end %>
+
+    <div class="container d-grid gap-2 my-5 mx-auto">
+    <%= link_to "New group", new_charity_path, class: 'btn btn-success fs-1 py-4' %>
+    </div>
+
+  </div>
+  
+</div>
