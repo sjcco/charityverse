@@ -1,6 +1,9 @@
 require 'rails_helper'
 
-RSpec.feature "CreatingObjects", type: :feature do
+# rubocop:disable Metrics/BlockLength
+
+RSpec.feature 'CreatingObjects', type: :feature do
+  # rubocop:enable Metrics/BlockLength
   context 'creating charity events' do
     it 'creates a new event' do
       user = create(:user, name: 'test')
@@ -17,13 +20,13 @@ RSpec.feature "CreatingObjects", type: :feature do
         select(group.name, from: 'charity_group_id')
       end
       click_button 'Save'
-      expect(page).to have_content("Charity charity_test was succesfully created!")
+      expect(page).to have_content('Charity charity_test was succesfully created!')
     end
   end
 
   context 'creating groups' do
     it 'creates a group' do
-      user = create(:user, name: 'test')
+      create(:user, name: 'test')
       visit(login_path)
       within('form') do
         fill_in 'name', with: 'test'
@@ -35,7 +38,7 @@ RSpec.feature "CreatingObjects", type: :feature do
         choose 'group_icon_otherpng'
       end
       click_button 'Save'
-      expect(page).to have_content("Group group_test was succesfully created!")
+      expect(page).to have_content('Group group_test was succesfully created!')
     end
   end
 end

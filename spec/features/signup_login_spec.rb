@@ -1,7 +1,10 @@
 require 'rails_helper'
 
-RSpec.feature "SignupLogins", type: :feature do
-  context 'existing users' do 
+# rubocop:disable Metrics/BlockLength
+
+RSpec.feature 'SignupLogins', type: :feature do
+  # rubocop:enable Metrics/BlockLength
+  context 'existing users' do
     it 'can login with an exiting user' do
       create(:user, name: 'test')
       visit(login_path)
