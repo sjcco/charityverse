@@ -1,0 +1,67 @@
+
+<nav class='container-fluid row text-white light bg-blue p-0 m-0'>
+    <a class="btn col-3 text-white my-auto fs-1" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+      <i class="fas fa-bars"></i>
+    </a>
+    <h1 class='col-6 display-3 text-center my-4'><%= @title %></h1>
+    <div class="col-3"></div>
+    
+</nav>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">   
+    <div class="row justify-content-center">
+      <%= image_tag "profile.jpg", class: 'rounded-circle img-fluid col-6' %>
+    </div>
+    
+  </div>
+  <div class="offcanvas-body">
+    <div class="row text-center">
+      <h5 class="text-white fs-1 col"><%= current_user.name %></h5>
+    </div>
+    <div class="container">
+      <div class="row text-white my-5">
+        <div class="col my-auto">
+          <%= link_to "Home",
+                      user_path(current_user),
+                      class: 'light d-block align-middle text-center text-white text-decoration-none fs-1 border-bottom border-light mx-5' %>
+        </div>
+      </div>
+
+      <div class="row text-white my-5">
+        <div class="col my-auto">
+          <%= link_to "All my charities",
+                      charities_path,
+                      class: 'light d-block align-middle text-center text-white text-decoration-none fs-1 border-bottom border-light mx-5' %>
+        </div>
+      </div>
+
+      <div class="row text-white my-5">
+        <div class="col my-auto">
+          <%= link_to "All my external charities",
+                      externals_path,
+                      class: 'light d-block align-middle text-center text-white text-decoration-none fs-1 border-bottom border-light mx-5' %>
+        </div>
+      </div>
+      
+      <div class="row text-white my-5">
+        <div class="col my-auto">
+          <%= link_to "All groups",
+                      groups_path,
+                      class: 'light d-block align-middle text-center text-white text-decoration-none fs-1 border-bottom border-light mx-5' %>
+          </div>
+      </div>  
+ 
+      <div class='row text-center'>
+        <%= link_to logout_path, class: 'text-decoration-none text-white fs-1' do %>
+          <i class="fas fa-sign-out-alt text-white fs-1 display-1 text-center col mt-5"></i>
+        <% end %>
+      </div>
+
+  
+    
+  
+  
+    </div>
+  </div>
+</div>

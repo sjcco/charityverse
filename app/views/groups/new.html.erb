@@ -1,0 +1,93 @@
+<div class="container-fluid p-0">
+<%= render "offcanvas" %>
+
+  <%= form_with url: groups_path, method: 'post', model: @group do |f| %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <div class="bg-white mt-5 mx-0 row display-1 field">
+      <%= f.text_field :name, placeholder: 'Name', autocomplete: :off, class: 'border-0 px-5' %>
+    </div>
+
+    <div class="bg-white mt-5 mx-0 row justify-content-center">
+      <div id="carouselExampleControls" class="carousel slide col-10" data-bs-ride="carousel" data-bs-interval='false'>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <%= image_tag "no_group.jpg", class: "img-fluid" %>
+              </div>
+              <%= f.radio_button :icon, "no_group.jpg", class: 'my-4' %>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <%= image_tag "children.png", class: "img-fluid" %>
+              </div>
+              <%= f.radio_button :icon, "children.png", class: 'my-4' %>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <%= image_tag "drop.jpg", class: "img-fluid" %>
+              </div>
+              <%= f.radio_button :icon, "drop.jpg", class: 'my-4' %>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <%= image_tag "panda.jpg", class: "img-fluid" %>
+              </div>
+              <%= f.radio_button :icon, "panda.jpg", class: 'my-4' %>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <%= image_tag "food.jpg", class: "img-fluid" %>
+              </div>
+              <%= f.radio_button :icon, "food.jpg", class: 'my-4' %>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <%= image_tag "red_cross.jpg", class: "img-fluid" %>
+              </div>
+              <%= f.radio_button :icon, "red_cross.jpg", class: 'my-4' %>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <%= image_tag "other.png", class: "img-fluid" %>
+              </div>
+              <%= f.radio_button :icon, "other.png", class: 'my-4' %>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class='text-dark display-1'><i class="fas fa-chevron-left"></i></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class='text-dark display-1'><i class="fas fa-chevron-right"></i></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="row actions justify-content-center mt-5 mx-0">
+      <%= f.submit 'Save', class: 'col-5 bg-green text-white border-0 display-1 light'%>
+    </div>
+
+  <% end %>
+
+</div>
+

@@ -1,0 +1,14 @@
+<div class="container-fluid p-0 new">
+  <nav class='row text-white light'>
+    <div class="col-3"><%= link_to root_path do %><i class="fas fa-arrow-left display-1 m-4"></i><% end %></div>
+    <h1 class='col display-3 text-center my-4'>SIGN UP</h1>
+    <input class='col-3' type="submit" value='sign up' form='signup'>
+  </nav>
+  <div class='form'>
+    <%= form_with model: @user, url: users_path, id: 'signup' do |f| %>
+      <div class="field">
+        <%= f.text_field :name, placeholder: 'Name', class: 'name' %>
+      </div>
+      <% end %>
+    </div>
+</div>

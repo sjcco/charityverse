@@ -1,0 +1,27 @@
+<div class="container-fluid p-0 vh-100">
+<%= render "offcanvas" %>
+  <div class="my-5 bg-white mx-4">
+    <div class='row justify-content-center'>
+      <div class="col-4 ">
+        <%= image_tag @group.icon, class: 'img-fluid my-4' %>
+      </div>
+    </div>    
+  </div>
+
+  <% @charities.each do|charity| %>
+    <div class="mx-4 mt-3 bg-white ">
+      <div class="row justify-content-center py-5">
+        <div class="col-3"><h3 class="fs-2 text-dark bold">Author: <%= User.find(charity.author_id).name %></h3></div>
+        <div class="col-3"><h3 class="fs-2 text-dark bold"><%= format("$%.2f", charity.amount) %></h3></div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-3">
+          <p class="fs-4 text-dark light"><%= charity.updated_at.strftime("%d %b %Y") %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  
+  
+
+</div>
