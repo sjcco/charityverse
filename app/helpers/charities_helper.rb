@@ -15,10 +15,10 @@ module CharitiesHelper
   end
 
   def display_icon(charity)
-    if charity.group_id.nil?
+    if charity.group.nil?
       image_tag 'no_group.jpg', class: 'img-fluid'
     else
-      image_tag Group.find(charity.group_id).icon, class: 'img-fluid'
+      image_tag charity.group.icon, class: 'img-fluid'
     end
   end
 end

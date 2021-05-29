@@ -23,7 +23,7 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     @title = "#{@group.name} transactions"
-    @charities = Charity.where(group_id: @group.id).all
+    @charities = @group.charities
   end
 
   def index
