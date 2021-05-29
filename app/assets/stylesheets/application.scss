@@ -18,12 +18,12 @@
 
 @font-face {
   font-family: 'ProximaNovaBold';
-  src: font-url('ProximaNovaBold.otf') format('opentype');
+  src: url('ProximaNovaBold.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'ProximaNovalight';
-  src: font-url('ProximaNovaAltLight.otf') format('opentype');
+  src: url('ProximaNovaAltLight.otf') format('opentype');
 }
 
 .bold {
@@ -40,7 +40,7 @@ body {
 }
 
 .bg-blue {
-  background-color: #3778c2
+  background-color: #3778c2;
 }
 
 .bg-white {
