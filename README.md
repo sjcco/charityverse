@@ -16,7 +16,7 @@ Site similar to Snapscan an app for grouping payments by goal with your family/f
 
 ## Live Demo
 
-[Live Demo Link](https://floating-chamber-75048.herokuapp.com/)
+[Live Demo Link](https://young-castle-14988.herokuapp.com/)
 
 To get a local copy up and running follow these simple example steps.
 
