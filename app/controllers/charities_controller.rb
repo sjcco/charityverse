@@ -30,7 +30,7 @@ class CharitiesController < ApplicationController
 
   def index
     @title = 'Charities'
-    @charities = Charity.where(author_id: current_user.id).all.order(updated_at: :desc)
+    @charities = Charity.where(author_id: current_user.id).includes(:group).order(updated_at: :desc)
     @amount = @charities.pluck(:amount).inject(0, :+)
   end
 
