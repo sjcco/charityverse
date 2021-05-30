@@ -17,21 +17,21 @@
 @import 'bootstrap';
 
 @font-face {
-  font-family: 'ProximaNovaBold';
+  font-family: 'ProximaNovaBold', sans-serif;
   src: url('ProximaNovaBold.otf') format('opentype');
 }
 
 @font-face {
-  font-family: 'ProximaNovalight';
+  font-family: 'ProximaNovalight', sans-serif;
   src: url('ProximaNovaAltLight.otf') format('opentype');
 }
 
 .bold {
-  font-family: 'ProximaNovaBold';
+  font-family: 'ProximaNovaBold', sans-serif;
 }
 
 .light {
-  font-family: 'ProximaNovalight' !important;
+  font-family: 'ProximaNovalight', sans-serif !important;
 }
 
 body {
